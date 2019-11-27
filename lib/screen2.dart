@@ -6,22 +6,10 @@ class Screen2 extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.arrow_back_ios),
-        ),
         title: Text('Screen2'),
       ),
       body: Center(
-        child: FlatButton(
-          color: Colors.orange,
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Back'),
-        ),
+        child: Text('Single parameter'),
       ),
     );
   }

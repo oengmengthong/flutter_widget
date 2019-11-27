@@ -7,49 +7,79 @@ class HomeScreen extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
         title: Text('hello app bar'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Text widget'),
-            Text(
-              'Text With style',
-              style: TextStyle(
-                  fontSize: 50,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic),
-            ),
-            FlatButton(
-              color: Colors.green,
-              onPressed: () {
-                print('click me');
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Screen2(),
-                  ),
-                );
-              },
-              child: Text('Flat Button'),
-            ),
-            RaisedButton(
-              color: Colors.blue,
-              onPressed: () {},
-              child: Text('Raised Button'),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.perm_camera_mic,
-                size: 50,
-                color: Colors.green,
-              ),
-            )
+            _widget1(),
+            _widget2(),
+            _widget3(),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _widget1() {
+    return Expanded(
+      flex: 1,
+      child: Container(
+        color: Colors.red,
+      ),
+    );
+  }
+
+  Widget _widget2() {
+    return Expanded(
+      flex: 2,
+      child: Container(
+        padding: EdgeInsets.all(10),
+        color: Colors.blue,
+        child: Row(
+          children: <Widget>[
+            _area1(),
+            _area2(),
+            _area3(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _widget3() {
+    return Expanded(
+      flex: 2,
+      child: Container(
+        color: Colors.teal,
+      ),
+    );
+  }
+
+  Widget _area1() {
+    return Expanded(
+      flex: 1,
+      child: Container(
+        color: Colors.red,
+      ),
+    );
+  }
+
+  Widget _area2() {
+    return Expanded(
+      flex: 1,
+      child: Container(
+        color: Colors.yellow,
+      ),
+    );
+  }
+
+  Widget _area3() {
+    return Expanded(
+      flex: 1,
+      child: Container(
+        color: Colors.green,
       ),
     );
   }
